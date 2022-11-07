@@ -4,11 +4,11 @@ load("schema.star", "schema")
 load("time.star", "time")
 load("encoding/json.star", "json")
 
-TIDBYT_OAUTH_CALLBACK_URL = "http%3A%2F%2Flocalhost%3A8080%2Foauth-callback"
+TIDBYT_OAUTH_CALLBACK_URL = "http%3A%2F%2Flocalhost%3A8080%2Foauth-callback" # registered http://localhost:8080/oauth-callback as redirect_uri at Dexcom
 
 DEXCOM_CLIENT_ID = "d9vtCJPnaZ5IVMSx8KbAqPZSOOcq6hO2"
 DEXCOM_CLIENT_SECRET = "xxxxxxxxxxxx"
-DEXCOM_OAUTH_AUTHORIZATION_URL = "https://api.dexcom.com/v2/oauth2/login?client_id={DEXCOM_CLIENT_ID}&redirect_uri={TIDBYT_OAUTH_CALLBACK_URL}&response_type=code&scope=offline_access".format(DEXCOM_CLIENT_ID=DEXCOM_CLIENT_ID, TIDBYT_OAUTH_CALLBACK_URL=TIDBYT_OAUTH_CALLBACK_URL)
+DEXCOM_OAUTH_AUTHORIZATION_URL = "https://api.dexcom.com/v2/oauth2/login"
 DEXCOM_OAUTH_TOKEN_URL = "https://api.dexcom.com/v2/oauth2/token"
 
 def main(config):
